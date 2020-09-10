@@ -1,0 +1,5 @@
+{
+    "require": {
+        "altayalp/ftp-client": "^1.0"
+    }
+}

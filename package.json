@@ -1,0 +1,26 @@
+{
+  "name": "grutto-elements",
+  "version": "1.0.0",
+  "main": "Gruntfile.js",
+  "homepage": "https://alimir.ir",
+  "description": "Grutto Elements",
+  "author": {
+    "name": "Alimir",
+    "email": "alimir71@gmail.com",
+    "url": "https://alimir.ir"
+  },
+  "repository": "ssh://git@45.89.139.152:7999/hp/grutto-elements.git",
+  "license": "MIT",
+  "devDependencies": {
+    "cross-env": "^1.0.6",
+    "grunt": "^1.0.4",
+    "grunt-concurrent": "^2.3.1",
+    "grunt-contrib-clean": ">=0.5.0",
+    "grunt-rsync": ">=0.6.2",
+    "grunt-shell": ">=1.1.1",
+    "grunt-sync": "^0.8.2",
+    "http-server": "^0.12.1",
+    "load-grunt-tasks": ">=0.6.0",
+    "time-grunt": ">=0.4.0"
+  }
+}
