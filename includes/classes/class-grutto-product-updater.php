@@ -13,10 +13,20 @@ class Grutto_Product_Updater{
         $this->update_product();
     }
 
+    /**
+     * Scan temp directory and create list of files.
+     *
+     * @return void
+     */
     private function set_query_list(){
         $this->query_list = array_slice( scandir( $this->local_path ), 2 );
     }
 
+    /**
+     * Update product info
+     *
+     * @return void
+     */
     private function update_product(){
         if( ! is_array( $this->query_list ) ){
             return;
@@ -40,6 +50,12 @@ class Grutto_Product_Updater{
 
     }
 
+    /**
+     * Get product object by SKU number
+     *
+     * @param string $sku
+     * @return void
+     */
     private function get_product_by_sku( $sku ) {
         $product_id = $this->wpdb->get_var(
             $this->wpdb->prepare( "SELECT post_id FROM {$this->wpdb->postmeta} WHERE meta_key='_sku' AND meta_value = '%s' LIMIT 1", $sku )
@@ -52,6 +68,12 @@ class Grutto_Product_Updater{
         return false;
     }
 
+    /**
+     * Get file content in array
+     *
+     * @param string $file_name
+     * @return array|false
+     */
     private function get_file_data( $file_name ){
         $file_content = @fopen( $this->local_path . $file_name, 'r');
         if ( $file_content ) {
