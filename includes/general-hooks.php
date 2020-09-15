@@ -12,5 +12,7 @@ function grutto_init_daily_scheduled(){
     $ftp->download_files();
     // Update product info
     new Grutto_Product_Updater;
+    // Send daily report
+    grutto_send_daily_report();
 }
 add_action( 'grutto_create_daily_scheduled', 'grutto_init_daily_scheduled' );
